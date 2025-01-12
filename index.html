@@ -9,21 +9,16 @@
 <label>First Name</label><input name="firstname" type="text">
 <label>Last Name</label><input name="lastname" type="text">
 <label>Email</label><input name="email" type="text">
-  <select class="form-dropdown is-active" id="input_12" name="q12_howDid" style="width:310px" data-component="dropdown" aria-label="How did you find us?">
-              <option value="">Please Select</option>
-              <option value="Cancer Council Resource">Cancer Council Resource</option>
-              <option value="CCQ staff/volunteers">CCQ staff/volunteers</option>
-              <option value="Non Cancer council run conference">Non Cancer council run conference</option>
-              <option value="Word of Mouth ">Word of Mouth </option>
-              <option value="Internet Search ">Internet Search </option>
-              <option value="Paper/Magazine ">Paper/Magazine </option>
-              <option value="Radio">Radio</option>
-              <option value="Television">Television</option>
-              <option value="Medical/Allied Health Professional">Medical/Allied Health Professional</option>
-              <option value="Social Media ">Social Media </option>
-              <option value="Phone Book ">Phone Book </option>
-              <option value="Non-Cancer Council Resource">Non-Cancer Council Resource</option>
-            </select>
+ <select id="genderidentity" name="genderidentity" title="Gender">
+                                                                        <option value="" hidden="">Placeholder text</option>
+                                                                        <option id="contact_genderidentity" value="1">Male</option>
+                                                                        <option id="contact_genderidentity" value="2">Female</option>
+                                                                        <option id="contact_genderidentity" value="765450001">Transgender Male</option>
+                                                                        <option id="contact_genderidentity" value="765450002">Transgender Female</option>
+                                                                        <option id="contact_genderidentity" value="765450003">Non-binary</option>
+                                                                        <option id="contact_genderidentity" value="765450004">Other</option>
+                                                                        <option id="contact_genderidentity" value="765450005">Prefer not to disclose</option>
+                                                                    </select>
 <button type="submit">Submit
 </button>
 </form>
@@ -48,10 +43,18 @@
                 DataverseFieldName: "emailaddress1",
             },
             {
-                FormFieldName: "input_12",
-                DataverseFieldName: "howfound",
+                FormFieldName: "genderidentity",
+                DataverseFieldName: "contact_genderidentity",
+                DataverseFieldValue: [
+                    { FormValue: "1", DataverseValue: "1" }, // Male
+                    { FormValue: "2", DataverseValue: "2" }, // Female
+                    { FormValue: "765450001", DataverseValue: "765450001" }, // Transgender Male
+                    { FormValue: "765450002", DataverseValue: "765450002" }, // Transgender Female
+                    { FormValue: "765450003", DataverseValue: "765450003" }, // Non-binary
+                    { FormValue: "765450004", DataverseValue: "765450004" }, // Other
+                    { FormValue: "765450005", DataverseValue: "765450005" }, // Prefer not to disclose
+                ],
             },
-
         ];
 
         form.addEventListener("submit", (e) => {
