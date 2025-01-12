@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lorem Ipsum Sucka</title>
+</head>
+<body>
+<form id="formCapturePOC">
+<label>First Name</label><input name="firstname" type="text">
+<label>Last Name</label><input name="lastname" type="text">
+<label>Email</label><input name="email" type="text">
+<button type="submit">Submit
+</button>
+</form>
+
+<script src='https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/oce/FormCapture/FormCapture.bundle.js'></script>
+<script>
+    // NOTE: for reference see https://go.microsoft.com/fwlink/?linkid=2250770
+
+    d365mktformcapture.waitForElement("#formCapturePOC") // example: "#form1" as a selector for form with id="form1"
+    .then(form => {
+        const mappings = [
+            {
+                FormFieldName: "firstname",
+                DataverseFieldName: "firstname",
+            },
+            {
+                FormFieldName: "lastname",
+                DataverseFieldName: "lastname",
+            },
+            {
+                FormFieldName: "email",
+                DataverseFieldName: "emailaddress1",
+            },
+
+        ];
+
+        form.addEventListener("submit", (e) => {
+            const serializedForm = d365mktformcapture.serializeForm(form, mappings);
+            // console.log(JSON.stringify(serializedForm)); // NOTE: enable for debugging
+            const payload = serializedForm.SerializedForm.build();
+
+            const captureConfig = {
+                FormId: "2f468d4b-14bc-ef11-a72f-6045bd40a8b5",
+                FormApiUrl: "https://public-oce.mkt.dynamics.com/api/v1.0/orgs/7a597da6-1198-ef11-8a66-002248942acb/landingpageforms"
+            }
+            d365mktformcapture.submitForm(captureConfig, payload);
+        }, true);
+    });
+</script>
+</body>
+</html>
