@@ -9,6 +9,21 @@
 <label>First Name</label><input name="firstname" type="text">
 <label>Last Name</label><input name="lastname" type="text">
 <label>Email</label><input name="email" type="text">
+  <select class="form-dropdown is-active" id="input_12" name="q12_howDid" style="width:310px" data-component="dropdown" aria-label="How did you find us?">
+              <option value="">Please Select</option>
+              <option value="Cancer Council Resource">Cancer Council Resource</option>
+              <option value="CCQ staff/volunteers">CCQ staff/volunteers</option>
+              <option value="Non Cancer council run conference">Non Cancer council run conference</option>
+              <option value="Word of Mouth ">Word of Mouth </option>
+              <option value="Internet Search ">Internet Search </option>
+              <option value="Paper/Magazine ">Paper/Magazine </option>
+              <option value="Radio">Radio</option>
+              <option value="Television">Television</option>
+              <option value="Medical/Allied Health Professional">Medical/Allied Health Professional</option>
+              <option value="Social Media ">Social Media </option>
+              <option value="Phone Book ">Phone Book </option>
+              <option value="Non-Cancer Council Resource">Non-Cancer Council Resource</option>
+            </select>
 <button type="submit">Submit
 </button>
 </form>
@@ -31,6 +46,10 @@
             {
                 FormFieldName: "email",
                 DataverseFieldName: "emailaddress1",
+            },
+            {
+                FormFieldName: "input_12",
+                DataverseFieldName: "howfound",
             },
 
         ];
