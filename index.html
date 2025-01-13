@@ -24,19 +24,19 @@
 <script>
     // NOTE: for reference see https://go.microsoft.com/fwlink/?linkid=2250770
 
-    d365mktformcapture.waitForElement("#formCapturePOC") // example: "#form1" as a selector for form with id="form1"
+    d365mktformcapture.waitForElement("#form_250117436419050") // example: "#form1" as a selector for form with id="form1"
     .then(form => {
         const mappings = [
             {
-                FormFieldName: "firstname",
+                FormFieldName: "q3_name[first]",
                 DataverseFieldName: "firstname",
             },
             {
-                FormFieldName: "lastname",
+                FormFieldName: "q3_name[last]",
                 DataverseFieldName: "lastname",
             },
             {
-                FormFieldName: "email",
+                FormFieldName: "q4_email",
                 DataverseFieldName: "emailaddress1",
             },
 
