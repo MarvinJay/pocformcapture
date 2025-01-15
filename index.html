@@ -69,5 +69,23 @@
         data-cached-form-url='https://assets-oce.mkt.dynamics.com/7a597da6-1198-ef11-8a66-002248942acb/digitalassets/forms/f6357ccd-cecd-ef11-a72f-002248e1828c' ></div>
         <script src = 'https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/oce/FormLoader/FormLoader.bundle.js' ></script>
         <script>document.documentElement.lang = navigator.language;</script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("Content loaded");
+        const collapsible = document.querySelector('.collapsible');
+        const content = document.querySelector('.content');
+
+        collapsible.addEventListener('click', function () {
+            console.log("Collapsible clicked.");
+                this.classList.toggle('active');
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+            });
+    </script>
 </body>  
 </html>
