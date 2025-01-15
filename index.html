@@ -70,22 +70,14 @@
         <script src = 'https://cxppusa1formui01cdnsa01-endpoint.azureedge.net/oce/FormLoader/FormLoader.bundle.js' ></script>
         <script>document.documentElement.lang = navigator.language;</script>
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            console.log("Content loaded");
-        const collapsible = document.querySelector('.collapsible');
-        const content = document.querySelector('.content');
-
-        collapsible.addEventListener('click', function () {
-            console.log("Collapsible clicked.");
-                this.classList.toggle('active');
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+       $(document).ready(function () {
+            $('.collapsible').click(function () {
+                $(this).toggleClass('active');
+                $('.content').slideToggle(); // Animate the content visibility
             });
-            });
+        });
     </script>
 </body>  
 </html>
