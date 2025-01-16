@@ -76,11 +76,13 @@
     <script>
        $(document).ready(function () {
             $('collapsible-hp').click(function () {
+              console.log("HP");
                 $(this).toggleClass('active');
                 $('.content-hp').slideToggle(); // Animate the content visibility
             });
 
               $('collapsible-contact').click(function () {
+                 console.log("Client");
                 $(this).toggleClass('active');
                 $('.content-contact').slideToggle(); // Animate the content visibility
             });
