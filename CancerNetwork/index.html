@@ -1131,33 +1131,55 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         $(document).ready(function () {
-         let mobileInput = $('input[name="mobilephone"]');
+        let mobileInput = $('input[name="mobilephone"]');
 
+    // Ensure the field starts with +61
+    mobileInput.val('+61');
+
+    // Prevent removal of +61
+    mobileInput.on('keydown', function (e) {
+        if ($(this).val().length <= 3 && e.key === "Backspace") {
+            e.preventDefault();
+        }
+    });
+
+    // Input validation
     mobileInput.on('input', function () {
         let value = $(this).val();
 
-        // Remove any unwanted characters (allow digits and + at the start)
-        value = value.replace(/[^\d+]/g, '');
+        // Ensure +61 remains at the beginning
+        if (!value.startsWith('+61')) {
+            value = '+61' + value.replace(/\D/g, ''); // Remove non-numeric characters
+        }
 
-        // Validate the pattern
-        let isValid = /^(\+61[4][0-9]{8}|04[0-9]{8})$/.test(value);
+        // Remove invalid characters (only allow digits after +61)
+        value = value.replace(/[^\d]/g, '');
+        value = '+61' + value.substring(2); // Maintain the +61 prefix
 
-        // Apply validation styling
-        if (isValid || value === '') {
+        // Enforce max length (+61 plus 9 digits)
+        if (value.length > 12) {
+            value = value.substring(0, 12);
+        }
+
+        // Update input value
+        $(this).val(value);
+
+        // Validate pattern: +61 4XXXXXXXX (total 12 characters)
+        let isValid = /^\+61[4][0-9]{8}$/.test(value);
+        if (isValid) {
             $(this).removeClass('invalid').addClass('valid');
         } else {
             $(this).removeClass('valid').addClass('invalid');
         }
     });
 
-    // Optional: Prevent invalid characters from being entered
+    // Prevent typing non-numeric characters (except for the initial +)
     mobileInput.on('keypress', function (e) {
         let char = String.fromCharCode(e.which);
-        if (!char.match(/[0-9+]/) || (char === '+' && $(this).val().length > 0)) {
+        if (!char.match(/[0-9]/)) {
             e.preventDefault();
         }
     });
-
 // Validate ci_hospitalpostcode and contact_postcode
     $('#ci_hospitalpostcode, #contact_postcode').on('input', function () {
         const value = $(this).val();
