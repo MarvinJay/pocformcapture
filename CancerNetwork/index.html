@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Form</title>
+    <meta name="referrer" content="never">
+    <meta type="xrm/designer/setting" name="type" value="marketing-designer-content-editor-document">
+    <meta type="xrm/designer/setting" name="layout-editable" value="marketing-designer-layout-editable">
+    <style>
+        .editor-control-layout html {
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .editor-control-layout *,
+        .editor-control-layout ::before,
+        .editor-control-layout ::after {
+            box-sizing: inherit;
+        }
+
+        .marketingForm h1 {
+            color: rgb(0, 0, 0);
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            font-family: Inter, sans-serif;
+            line-height: 1.25;
+            font-size: 28px;
+        }
+
+        .marketingForm h2 {
+            color: rgb(51, 51, 51);
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            line-height: 1.25;
+            font-family: Inter, sans-serif;
+            font-size: 22px;
+        }
+
+        .marketingForm h3 {
+            color: rgb(0, 0, 0);
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            line-height: 1.25;
+            font-family: Inter, sans-serif;
+            font-size: 18px;
+        }
+
+        .marketingForm p {
+            margin: 0px;
+            padding: 0px;
+            line-height: 1.25;
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+        }
+
+        .marketingForm a,
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2) a {
+            text-decoration: none;
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+        }
+
+        .marketingForm .primaryButtonWrapper,
+        .submitButtonWrapper {
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .marketingForm .primaryButton,
+        .submitButton {
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            background-color: rgb(34, 102, 227);
+            border: none;
+            border-radius: 4px;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .marketingForm .secondaryButton {
+            font-family: Inter, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(0, 130, 221);
+            border-radius: 4px;
+            color: rgb(34, 102, 227);
+            padding: 10px 20px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+        .marketingForm .error {
+            font-family: Inter, sans-serif;
+            font-weight: bold;
+            font-size: 8px;
+            margin: 0px;
+            padding: 0px;
+            color: rgb(168, 0, 0);
+        }
+
+        .zero-state-container span {
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 26px;
+            color: rgb(36, 36, 36);
+        }
+
+        form.marketingForm {
+            color: rgb(0, 0, 0);
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+        }
+
+        [data-layout="true"] {
+            margin: 0px auto;
+            max-width: 600px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        div[data-editorblocktype="SubmitButton"] {
+            padding: 20px 12%;
+        }
+
+        div[data-editorblocktype="Captcha"] {
+            padding: 20px 12%;
+        }
+
+        div[data-editorblocktype="Captcha"] table,
+        div[data-editorblocktype="Captcha"] div>table>tbody>tr>td:nth-of-type(2) {
+            width: 100% !important;
+        }
+
+        div[data-editorblocktype="Captcha"] div>div>table>tbody>tr:first-of-type>td:last-of-type {
+            padding-bottom: 12px !important;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] {
+            margin-top: 20px;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] td:nth-of-type(2) {
+            width: auto !important;
+        }
+
+        div[data-editorblocktype="Captcha"] tr[id="wlspispHIPErrorContainer"] img {
+            display: flex;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div {
+            margin-top: 4px;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div * {
+            font-weight: 400;
+        }
+
+        div[data-editorblocktype="Captcha"] td:nth-of-type(2)>div>div b {
+            color: rgb(121, 119, 117);
+        }
+
+        div[data-editorblocktype="Captcha"] tr:nth-of-type(2)>td {
+            height: 0px !important;
+        }
+
+        div[data-editorblocktype="Captcha"] td input {
+            margin-top: 20px !important;
+            padding: 6px 8px !important;
+            width: 100% !important;
+        }
+
+        div[data-editorblocktype="Captcha"] div[id^="wlspaudioBtnHolder"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div[data-editorblocktype="About"],
+        div[data-editorblocktype="Sessions"],
+        div[data-editorblocktype="Speakers"] {
+            padding: 32px 24px;
+        }
+
+        div[data-editorblocktype="Sessions"] h2 {
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .textFormFieldBlock,
+        .dateTimeFormFieldBlock,
+        .twoOptionFormFieldBlock,
+        .optionSetFormFieldBlock,
+        .multiOptionSetFormFieldBlock,
+        .lookupFormFieldBlock {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        table.multi .textFormFieldBlock,
+        table.multi .dateTimeFormFieldBlock,
+        table.multi .twoOptionFormFieldBlock,
+        table.multi .optionSetFormFieldBlock,
+        table.multi .multiOptionSetFormFieldBlock,
+        table.multi .lookupFormFieldBlock {
+            padding: 12px 20px;
+        }
+
+        .consentBlock {
+            padding: 4px 30px;
+        }
+
+        .textFormFieldBlock label,
+        .dateTimeFormFieldBlock label,
+        .lookupFormFieldBlock label,
+        .twoOptionFormFieldBlock label.block-label,
+        .optionSetFormFieldBlock label.block-label,
+        .multiOptionSetFormFieldBlock label.block-label,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"],
+        .textFormFieldBlock label *,
+        .dateTimeFormFieldBlock label *,
+        .lookupFormFieldBlock label *,
+        .twoOptionFormFieldBlock label.block-label *,
+        .optionSetFormFieldBlock label.block-label *,
+        .multiOptionSetFormFieldBlock label.block-label *,
+        .consentBlock label p {
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 5;
+            color: rgb(15, 30, 100);
+        }
+
+        .textFormFieldBlock label,
+        .dateTimeFormFieldBlock label,
+        .lookupFormFieldBlock label,
+        .twoOptionFormFieldBlock label.block-label,
+        .optionSetFormFieldBlock label.block-label,
+        .multiOptionSetFormFieldBlock label.block-label,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"] {
+            display: inline-block;
+            margin: 4px 0px 0px;
+            padding: 0px;
+            flex: 1 1 0%;
+            width: 100%;
+        }
+
+        .textFormFieldBlock label>*,
+        .dateTimeFormFieldBlock label>*,
+        .lookupFormFieldBlock label>*,
+        .twoOptionFormFieldBlock label.block-label>*,
+        .optionSetFormFieldBlock label.block-label>*,
+        .multiOptionSetFormFieldBlock label.block-label>*,
+        .consentBlock label>* {
+            display: inline-block;
+        }
+
+        .textFormFieldBlock label::after,
+        .twooption_checkbox label::after,
+        .dateTimeFormFieldBlock label::after,
+        .lookupFormFieldBlock label::after,
+        .twoOptionFormFieldBlock label.block-label::after,
+        .twoOptionFormFieldBlock div.twooption_checkbox label::after,
+        .optionSetFormFieldBlock label.block-label::after,
+        .multiOptionSetFormFieldBlock label.block-label::after,
+        .consentBlock label p:first-of-type::after,
+        .eventSession label::after,
+        div[data-editorblocktype="Sessions"] h2::after,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+            width: 22px;
+            display: inline-block;
+            line-height: 22px;
+            text-align: center;
+            color: rgb(195, 52, 0);
+            content: "*";
+            visibility: hidden;
+        }
+
+        div[data-required].textFormFieldBlock label::after,
+        div[data-required].dateTimeFormFieldBlock label::after,
+        div[data-required].lookupFormFieldBlock label::after,
+        div[data-required] div.twooption_checkbox label::after,
+        div[data-required] label.block-label::after,
+        div[data-required="true"].consentBlock label p:first-of-type::after,
+        div[data-editorblocktype="Sessions"][data-required="true"i] h2::after,
+        div[data-editorblocktype="Captcha"] label[id^="wlspispHipInstructionContainer"]::after {
+            visibility: visible;
+        }
+
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label::after,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label::after {
+            visibility: visible;
+        }
+
+        .optionSetFormFieldBlock select,
+        .textFormFieldBlock input,
+        .dateTimeFormFieldBlock input,
+        .lookupFormFieldBlock input,
+        .marketingForm textarea,
+        div[data-editorblocktype="Captcha"] input {
+            font-family: Inter, sans-serif;
+            padding: 6px 8px;
+            background-color: rgb(250, 249, 248);
+            border: 1px solid rgb(225, 223, 221);
+            border-radius: 2px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            flex: 2 1 20%;
+        }
+
+        .optionSetFormFieldBlock select,
+        .textFormFieldBlock input::placeholder,
+        .dateTimeFormFieldBlock input,
+        .lookupFormFieldBlock input::placeholder,
+        .marketingForm textarea::placeholder,
+        div[data-editorblocktype="Captcha"] input::placeholder {}
+
+        .textFormFieldBlock textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .lookupFormFieldBlock input {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGQ9Ik0xMzQ0IDBxOTcgMCAxODcgMjV0MTY4IDcxIDE0MiAxMTAgMTExIDE0MyA3MSAxNjggMjUgMTg3cTAgOTctMjUgMTg3dC03MSAxNjgtMTEwIDE0Mi0xNDMgMTExLTE2OCA3MS0xODcgMjVxLTEyNSAwLTIzOS00MnQtMjExLTEyMWwtNzg1IDc4NHEtMTkgMTktNDUgMTl0LTQ1LTE5LTE5LTQ1cTAtMjYgMTktNDVsNzg0LTc4NXEtNzktOTYtMTIxLTIxMHQtNDItMjQwcTAtOTcgMjUtMTg3dDcxLTE2OCAxMTAtMTQyVDk4OSA5NnQxNjgtNzEgMTg3LTI1em0wIDEyODBxMTE5IDAgMjI0LTQ1dDE4My0xMjQgMTIzLTE4MyA0Ni0yMjRxMC0xMTktNDUtMjI0dC0xMjQtMTgzLTE4My0xMjMtMjI0LTQ2cS0xMTkgMC0yMjQgNDVUOTM3IDI5NyA4MTQgNDgwdC00NiAyMjRxMCAxMTkgNDUgMjI0dDEyNCAxODMgMTgzIDEyMyAyMjQgNDZ6Ii8+PC9zdmc+");
+            background-repeat: no-repeat;
+            background-position: 98% 50%;
+            background-size: 1em 1em;
+        }
+
+        .optionSetFormFieldBlock select {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEyIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02IDYuNzA4OThMMC4xNDY0ODQgMC44NTU0NjlMMC44NTU0NjkgMC4xNDY0ODRMNiA1LjI5MTAyTDExLjE0NDUgMC4xNDY0ODRMMTEuODUzNSAwLjg1NTQ2OUw2IDYuNzA4OThaIiBmaWxsPSIjNjA1RTVDIi8+Cjwvc3ZnPgo=");
+            background-repeat: no-repeat;
+            background-position: 98% 50%;
+            appearance: none;
+        }
+
+        .optionSetFormFieldBlock select option {
+            background-color: rgb(250, 249, 248);
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .twoOptionFormFieldBlock div.twooption_checkbox,
+        .optionSetFormFieldBlock div.radiobuttons,
+        .multiOptionSetFormFieldBlock fieldset {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 14px;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            flex: 2 1 0%;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .optionSetFormFieldBlock div.radiobuttons,
+        .multiOptionSetFormFieldBlock fieldset {
+            margin-top: 16px;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons>div,
+        .twoOptionFormFieldBlock div.twooption_checkbox>div,
+        .optionSetFormFieldBlock div.radiobuttons>div,
+        .multiOptionSetFormFieldBlock fieldset>div,
+        .consentBlock>div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div label,
+        .optionSetFormFieldBlock div.radiobuttons div label {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div label,
+        .twoOptionFormFieldBlock div.twooption_checkbox div label div,
+        .consentBlock div label p {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .eventSessions div.eventSession div label,
+        .eventSessions div.eventSession div label div {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+        }
+
+        .multiOptionSetFormFieldBlock fieldset>div>label {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .optionSetFormFieldBlock div.radiobuttons div input[type="radio"]:checked+label,
+        .twoOptionFormFieldBlock div.radiobuttons div input[type="radio"]:checked+label {}
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked+label,
+        .twoOptionFormFieldBlock div.twooption_checkbox div input[type="checkbox"]:checked+label div,
+        .consentBlock div input[type="checkbox"]:checked+label p {}
+
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label,
+        .eventSessions div.eventSession div input[type="checkbox"]:checked+label div,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label,
+        .eventSessions div.eventSession div input[type="radio"]:checked+label div {
+            text-decoration: none;
+            font-weight: 400;
+            color: rgb(0, 0, 0);
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons,
+        .optionSetFormFieldBlock div.radiobuttons {
+            padding: 0px;
+            margin: 0px;
+            border-radius: 0px;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox>div,
+        .consentBlock>div {
+            width: 100%;
+            border-radius: 0px;
+            background-color: transparent;
+        }
+
+        .eventSessions div.eventSession>div {
+            width: 100%;
+            border-radius: 0px;
+            background-color: transparent;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div,
+        .optionSetFormFieldBlock div.radiobuttons div {
+            width: 100%;
+        }
+
+        .twoOptionFormFieldBlock div.twooption_checkbox div,
+        .consentBlock div {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .eventSessions div.eventSession div {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        div[data-editorblocktype="Sessions"] .eventSessions div.eventSession {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription>p:not(:first-child) {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription p .sessionFullMessage {
+            color: rgb(191, 0, 119);
+        }
+
+        .eventSessions div.eventSession:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        .eventSessions div.eventSession div.eventSessionInput {
+            flex: 0 1 0%;
+        }
+
+        .eventSessions div.eventSession div.eventSessionDescription {
+            flex: 1 1 0%;
+        }
+
+        .twoOptionFormFieldBlock div.radiobuttons div input,
+        .twoOptionFormFieldBlock div.twooption_checkbox div input,
+        .optionSetFormFieldBlock div.radiobuttons div input,
+        .multiOptionSetFormFieldBlock fieldset>div>input[type="checkbox"],
+        .eventSession>div>input[type="checkbox"],
+        .eventSession>div>input[type="radio"],
+        .consentBlock div input {
+            margin: 0px;
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgb(50, 49, 48);
+            border-radius: 2px;
+            accent-color: rgb(0, 120, 212);
+            flex-shrink: 0;
+        }
+
+        .eventSessions {
+            font-size: 16px;
+            line-height: 1.2;
+            border: none;
+        }
+
+        .eventSession label b {
+            display: inline;
+        }
+
+        .marketingForm [dir="rtl"],
+        .marketingForm [dir="rtl"] * {
+            text-align: right;
+        }
+
+        .marketingForm s span {
+            text-decoration: line-through;
+        }
+
+        .marketingForm u span {
+            text-decoration: underline;
+        }
+
+        .dividerWrapper p span {
+            line-height: 0px;
+        }
+
+        .marketingForm ul,
+        .marketingForm ol {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            line-height: 1.25;
+            padding-inline-end: 0px !important;
+        }
+
+        .marketingForm p img {
+            max-width: 100%;
+        }
+
+        .marketingForm u a {
+            text-decoration: underline;
+        }
+
+        .marketingForm .imageWrapper a img {
+            text-decoration: none;
+            border: 0px;
+        }
+
+        .marketingForm th.columnContainer,
+        .marketingForm th.inner {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .marketingForm [dir="rtl"] th.columnContainer,
+        .marketingForm [dir="rtl"] th.inner {
+            font-weight: normal;
+            text-align: right;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .marketingForm a span {
+                line-height: inherit !important;
+            }
+
+            .marketingForm .multi table {
+                table-layout: fixed;
+                height: auto !important;
+            }
+
+            .marketingForm .multi td {
+                width: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .multi tbody,
+            .marketingForm .multi tbody tr,
+            .marketingForm .multi tbody tr td,
+            .marketingForm .multi tbody tr th,
+            .marketingForm .outer tbody,
+            .marketingForm .outer tbody tr,
+            .marketingForm .outer tbody tr td,
+            .marketingForm .outer tbody tr th {
+                display: block;
+                box-sizing: border-box;
+                height: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .wrap-section .multi tbody,
+            .marketingForm .wrap-section .multi tbody tr,
+            .marketingForm .wrap-section .multi tbody tr td,
+            .marketingForm .wrap-section .multi tbody tr th,
+            .marketingForm .wrap-section .outer tbody,
+            .marketingForm .wrap-section .outer tbody tr,
+            .marketingForm .wrap-section .outer tbody tr td,
+            .marketingForm .wrap-section .outer tbody tr th {
+                width: 100% !important;
+            }
+
+            .marketingForm .multi .inner {
+                height: auto !important;
+                min-height: auto !important;
+            }
+
+            .marketingForm .tbContainer .inner {
+                box-sizing: border-box;
+            }
+
+            .marketingForm .outer {
+                width: 100% !important;
+            }
+
+            .marketingForm .tbContainer .columnContainer table {
+                table-layout: fixed !important;
+            }
+
+            .marketingForm .innerTable {
+                min-height: auto !important;
+            }
+
+            .marketingForm .no-wrap-section .outer {
+                display: table !important;
+            }
+
+            .marketingForm .no-wrap-section .multi table {
+                height: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody,
+            .marketingForm .no-wrap-section .outer tbody {
+                display: table-row-group !important;
+                width: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody tr,
+            .marketingForm .no-wrap-section .outer tbody tr {
+                display: table-row !important;
+                width: 100% !important;
+            }
+
+            .marketingForm .no-wrap-section .multi tbody tr td,
+            .marketingForm .no-wrap-section .multi tbody tr th,
+            .marketingForm .no-wrap-section .outer tbody tr td,
+            .marketingForm .no-wrap-section .outer tbody tr th {
+                display: table-cell !important;
+            }
+
+            .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr td,
+            .marketingForm .no-wrap-section.columns-equal-class .outer tbody tr th {
+                height: 0px !important;
+            }
+
+            .marketingForm .no-wrap-section .outer tbody tr td.inner,
+            .marketingForm .no-wrap-section .outer tbody tr th.inner {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .marketingForm a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+        }
+
+        .notification-container {
+            margin: 10px;
+        }
+
+        .notification-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 38px;
+            border: 1.44737px solid rgb(204, 204, 204);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .notification-message-hide {
+            display: none;
+        }
+
+        .phoneFormFieldBlock {
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        table.multi .phoneFormFieldBlock {
+            padding: 12px 20px;
+        }
+
+        .phoneFormFieldBlock label,
+        .phoneFormFieldBlock label * {
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            font-weight: 5;
+            color: rgb(15, 30, 100);
+        }
+
+        .phoneFormFieldBlock label {
+            display: inline-block;
+            margin: 4px 0px 0px;
+            padding: 0px;
+            flex: 1 1 0%;
+            width: 100%;
+        }
+
+        .phoneFormFieldBlock label>* {
+            display: inline-block;
+        }
+
+        .phoneFormFieldBlock label::after {
+            width: 22px;
+            display: inline-block;
+            line-height: 22px;
+            text-align: center;
+            color: rgb(195, 52, 0);
+            content: "*";
+            visibility: hidden;
+        }
+
+        div[data-required].phoneFormFieldBlock label::after {
+            visibility: visible;
+        }
+
+        .phoneFormFieldBlock input::placeholder {}
+
+        .phoneFormFieldBlock .phoneCountryCode {
+            display: flex;
+            flex: 2 1 20%;
+            align-items: center;
+            flex-direction: row;
+            box-sizing: border-box;
+            border: 1px solid rgb(225, 223, 221);
+            border-radius: 2px;
+            justify-content: center;
+            background-color: transparent;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .phoneFormFieldBlock .phoneCountryCodeLabel {
+            overflow: hidden;
+            margin: 0px;
+            cursor: pointer;
+            padding-left: 5px;
+            padding-right: 5px;
+            opacity: 1;
+            text-align: center;
+            color: rgb(96, 94, 92);
+            background-color: rgb(243, 242, 241);
+            align-items: center;
+            align-self: stretch;
+            display: flex;
+        }
+
+        .phoneFormFieldBlock span[hidden] {
+            display: none;
+        }
+
+        .phoneFormFieldBlock input {
+            font-family: Inter, sans-serif;
+            padding: 6px 8px;
+            background-color: rgb(250, 249, 248);
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            font-size: 14px;
+            flex: 2 1 0%;
+            border: none;
+        }
+
+        .collapsible:hover {
+            background-color: rgb(215, 219, 226);
+        }
+
+        .collapsible::after {
+            content: "▼";
+            font-size: 16px;
+            color: gray;
+        }
+
+        .collapsible.active::after {
+            content: "▲";
+        }
+
+        .collapsible-hp,
+        .collapsible-contact {
+            background-color: rgb(228, 230, 241);
+            color: rgb(44, 51, 68);
+            cursor: pointer;
+            padding: 15px;
+            text-align: left;
+            border: none;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .collapsible-hp:hover,
+        .collapsible-contact:hover {
+            background-color: rgb(215, 219, 226);
+        }
+
+        .collapsible-hp::after,
+        .collapsible-contact::after {
+            content: "▼";
+            font-size: 16px;
+            color: gray;
+        }
+
+        .collapsible-hp.active::after,
+        .collapsible-contact.active::after {
+            content: "▲";
+        }
+
+        .content {
+            display: none;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid rgb(215, 219, 226);
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .form-header-group .form-header {
+            color: rgb(15, 30, 100);
+        }
+
+        .header-large .form-header {
+            font-size: 2em;
+        }
+
+        .form-header {
+            color: rgb(44, 51, 69);
+            word-wrap: break-word;
+            word-break: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+
+        .header-large .form-subHeader {
+            font-size: 1em;
+        }
+
+        .form-subHeader {
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .name-fields {
+            float: left;
+        }
+
+        .form-sub-label {
+            margin-top: 11px;
+            margin-left: 2px;
+            display: block;
+            word-wrap: break-word;
+            word-break: break-word;
+            word-wrap: break-word;
+            word-break: break-word;
+            font-size: 0.75em !important;
+        }
+
+        .valid {
+            border: 2px solid green;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="marketingForm">
+        <div data-layout="true" data-layout-version="v2" style="max-width: 600px; margin: auto;">
+            <div class="notification-container">
+                <div class="notification-message notification-message-hide" data-notification-name="eventNotStarted">
+                    <div>This event has not started.</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="eventAtCapacity">
+                    <div>This event is fully booked</div>
+                </div>
+                <div class="notification-message notification-message-hide" data-notification-name="eventEnded">
+                    <div>This event has ended.</div>
+                </div>
+                <div class="notification-message notification-message-hide"
+                    data-notification-name="sessionsFullyBookedEventHasCapacity">
+                    <div>All sessions are fully booked but you can still register for the event.</div>
+                </div>
+            </div>
+            <div data-section="true" class="columns-equal-class wrap-section">
+                <table class="outer" align="center" cellpadding="0" cellspacing="0"
+                    style="border-collapse: collapse; width: 600px; display: block;">
+                    <tbody>
+                        <tr>
+                            <th>
+                                <table style="width: 100%;
+                border-collapse: collapse;" class="containerWrapper tbContainer" cellpadding="0" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <th data-container="true" class="columnContainer" data-container-width="100"
+                                                style="vertical-align:top; min-width: 5px; width: 600px; ; height: 0px;"
+                                                id="containerc8566b473f3381736345136847">
+                                                <table width="100%" cellpadding="0" cellspacing="0"
+                                                    style="border-collapse: collapse; height: 100%;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="inner ui-sortable"
+                                                                style="min-width: 5px; padding: 10px; vertical-align: top; word-wrap: break-word; word-break: break-word; word-wrap: break-word; word-break: break-word; font-weight: normal;">
+
+
+
+                                                                <div>
+                                                                    <div class="form-header-group  header-default">
+                                                                        <div class="header-text httal htvam">
+                                                                            <h2 id="header_3" class="form-header"
+                                                                                data-component="header">Health
+                                                                                Professional
+                                                                                Details</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div data-editorblocktype="Divider"
+                                                                        style="margin: 20px 10px;">
+                                                                        <div class="dividerWrapper" align="center">
+                                                                            <table
+                                                                                style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;"
+                                                                                role="presentation" class=""
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tbody>
+                                                                                    <tr style="padding: 0px;">
+                                                                                        <th
+                                                                                            style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;">
+                                                                                            <p
+                                                                                                style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;">
+                                                                                                <span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span>
+                                                                                            </p>
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="name-fields">
+                                                                        <div class="textFormFieldBlock"
+                                                                            data-editorblocktype="TextFormField"
+                                                                            data-targetaudience="contact"
+                                                                            data-targetproperty="firstname"
+                                                                            data-prefill="false"
+                                                                            data-required="required">
+                                                                            <label title="First Name" for="firstname-1736345133382">First Name</label><input id="firstname-1736345133382" type="text" name="firstname" placeholder="First Name" title="First Name" maxlength="50" required="required">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="textFormFieldBlock"
+                                                                        data-editorblocktype="TextFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="lastname"
+                                                                        data-required="required" data-prefill="false">
+                                                                        <label title="Last Name" for="lastname-1736345144800">Last Name</label><input id="lastname-1736345144800" type="text" name="lastname" placeholder="Last Name" title="Last Name" maxlength="50" required="required">
+                                                                    </div>
+
+
+
+                                                                    <div class="optionSetFormFieldBlock"
+                                                                        data-editorblocktype="OptionSetFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="ccq_occupation"
+                                                                        data-prefill="false" data-required="required">
+                                                                        <label title="Occupation" class="block-label" for="ccq_occupation-1738562882205">Occupation</label><select id="ccq_occupation-1738562882205" name="ccq_occupation" title="Occupation" required=""><option value="" hidden="">Select an occupation</option><option id="ccq_occupation-1738562882205-765450009" value="765450009">Anaesthetist</option><option id="ccq_occupation-1738562882205-765450005" value="765450005">Allied Health</option><option id="ccq_occupation-1738562882205-765450010" value="765450010">Art Therapist</option><option id="ccq_occupation-1738562882205-765450011" value="765450011">Audiologist</option><option id="ccq_occupation-1738562882205-765450000" value="765450000">Cancer Nurse</option><option id="ccq_occupation-1738562882205-765450001" value="765450001">Cancer Nurse Coordinator</option><option id="ccq_occupation-1738562882205-765450012" value="765450012">CCQ Staff Member</option><option id="ccq_occupation-1738562882205-765450013" value="765450013">CCQ Volunteer</option><option id="ccq_occupation-1738562882205-765450014" value="765450014">Chiropractor</option><option id="ccq_occupation-1738562882205-765450002" value="765450002">Counsellor</option><option id="ccq_occupation-1738562882205-765450015" value="765450015">Dance Therapist</option><option id="ccq_occupation-1738562882205-765450016" value="765450016">Dental Specialist</option><option id="ccq_occupation-1738562882205-765450017" value="765450017">Dermatologist</option><option id="ccq_occupation-1738562882205-765450018" value="765450018">Dietitian</option><option id="ccq_occupation-1738562882205-765450006" value="765450006">Doctor</option><option id="ccq_occupation-1738562882205-765450019" value="765450019">Emergency Medical Specialist</option><option id="ccq_occupation-1738562882205-765450020" value="765450020">Exercise Physiologist</option><option id="ccq_occupation-1738562882205-765450021" value="765450021">General Practicioner</option><option id="ccq_occupation-1738562882205-765450007" value="765450007">ICON Supportive Care</option><option id="ccq_occupation-1738562882205-765450022" value="765450022">Indigenous Health Worker</option><option id="ccq_occupation-1738562882205-765450023" value="765450023">Intern/Resident Medical Officer</option><option id="ccq_occupation-1738562882205-765450024" value="765450024">Medical Oncologist</option><option id="ccq_occupation-1738562882205-765450025" value="765450025">Music Therapist</option><option id="ccq_occupation-1738562882205-765450026" value="765450026">Natural Therapist</option><option id="ccq_occupation-1738562882205-765450027" value="765450027">Natural Therapist - Acupuncturist</option><option id="ccq_occupation-1738562882205-765450028" value="765450028">Natural Therapist - Chinese Medical Practicioner</option><option id="ccq_occupation-1738562882205-765450029" value="765450029">Natural Therapist - Herbalist (Chinese)</option><option id="ccq_occupation-1738562882205-765450030" value="765450030">Natural Therapist - Naturopath</option><option id="ccq_occupation-1738562882205-765450031" value="765450031">Nurse Assistant</option><option id="ccq_occupation-1738562882205-765450032" value="765450032">Nurse Educator</option><option id="ccq_occupation-1738562882205-765450033" value="765450033">Nurse Manager</option><option id="ccq_occupation-1738562882205-765450034" value="765450034">Nurse Practicioner</option><option id="ccq_occupation-1738562882205-765450035" value="765450035">Nurse Researcher</option><option id="ccq_occupation-1738562882205-765450036" value="765450036">Nutrionist</option><option id="ccq_occupation-1738562882205-765450037" value="765450037">Obstetrician and Gynaecologist</option><option id="ccq_occupation-1738562882205-765450038" value="765450038">Occupational Therapist</option><option id="ccq_occupation-1738562882205-765450039" value="765450039">Opthalmologist</option><option id="ccq_occupation-1738562882205-765450040" value="765450040">Optometrist</option><option id="ccq_occupation-1738562882205-765450041" value="765450041">Orthoptist</option><option id="ccq_occupation-1738562882205-765450042" value="765450042">Orthotist - Prosthetist</option><option id="ccq_occupation-1738562882205-765450043" value="765450043">Osteopath</option><option id="ccq_occupation-1738562882205-765450008" value="765450008">Other</option><option id="ccq_occupation-1738562882205-765450044" value="765450044">Paediatrician</option><option id="ccq_occupation-1738562882205-765450045" value="765450045">Pathologist</option><option id="ccq_occupation-1738562882205-765450046" value="765450046">Peer Support Volunteer</option><option id="ccq_occupation-1738562882205-765450047" value="765450047">Pharmacist</option><option id="ccq_occupation-1738562882205-765450048" value="765450048">Physiotherapist</option><option id="ccq_occupation-1738562882205-765450049" value="765450049">Podiatrist</option><option id="ccq_occupation-1738562882205-765450050" value="765450050">Psychiatrist</option><option id="ccq_occupation-1738562882205-765450051" value="765450051">Psychologist</option><option id="ccq_occupation-1738562882205-765450052" value="765450052">Radiation Therapist</option><option id="ccq_occupation-1738562882205-765450053" value="765450053">Radiographer</option><option id="ccq_occupation-1738562882205-765450054" value="765450054">Radiologist</option><option id="ccq_occupation-1738562882205-765450055" value="765450055">Registered Midwife</option><option id="ccq_occupation-1738562882205-765450056" value="765450056">Registered Nurse</option><option id="ccq_occupation-1738562882205-765450057" value="765450057">Registered Nurse - Oncology Nurse</option><option id="ccq_occupation-1738562882205-765450058" value="765450058">Registered Nurse - Paediatric Oncology Nurse</option><option id="ccq_occupation-1738562882205-765450059" value="765450059">Registered Nurse - Paediatric Nurse</option><option id="ccq_occupation-1738562882205-765450060" value="765450060">Registered Nurse - Palliative Care Nurse</option><option id="ccq_occupation-1738562882205-765450061" value="765450061">Registrar</option><option id="ccq_occupation-1738562882205-765450004" value="765450004">Social Worker</option><option id="ccq_occupation-1738562882205-765450063" value="765450063">Specialist Medical Practicioner - Industrial Medicine Specialist</option><option id="ccq_occupation-1738562882205-765450064" value="765450064">Specialist Medical Practicioner - Occupational Medicine Specialist</option><option id="ccq_occupation-1738562882205-765450065" value="765450065">Speech Pathologist</option><option id="ccq_occupation-1738562882205-765450066" value="765450066">Surgeon</option></select>
+                                                                    </div>
+                                                                    <div class="textFormFieldBlock"
+                                                                        data-editorblocktype="TextFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="emailaddress1"
+                                                                        data-prefill="false" data-required="required">
+                                                                        <label title="Email" for="emailaddress1-1736345170824">Email</label><input id="emailaddress1-1736345170824" type="email" name="emailaddress1" placeholder="Email" title="Email" pattern="[^@\s\\&quot;<>\)\(\[\]:;,.]+(([.]{1}[^@\s\\&quot;<>\)\(\[\]:;,.]+)+?|)@([^@\s\\&quot;<>\)\(\[\]\+:;,\.\-]+(((\.|\+|-|--)[^@\s\\&quot;<>\)\(\[\]+:;,.\-]+)+?|)([.][^0-9@\s\\&quot;<>\)\(\[\]+:;,.\-]+)+?)" required="required">
+                                                                    </div>
+
+
+
+
+
+
+
+
+                                                                    <div class="phoneFormFieldBlock"
+                                                                        data-editorblocktype="PhoneFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="mobilephone"
+                                                                        data-countrycode="+" data-prefill="false"
+                                                                        data-required="required">
+                                                                        <label for="mobilephone-1738284915306" title="Mobile Phone">Mobile Phone</label>
+                                                                        <div class="phoneCountryCode">
+                                                                            <span class="phoneCountryCodeLabel" hidden="">+</span><input id="mobilephone-1738284915306" type="tel" name="mobilephone" placeholder="+61XXXXXXXXX" title="Mobile Phone" required="required" pattern="^(\+61)([1-9][0-9]{8})$" maxlength="12">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="textFormFieldBlock"
+                                                                        data-editorblocktype="TextFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="address1_postalcode"
+                                                                        data-prefill="false" data-required="required">
+                                                                        <label title="Address 1: ZIP/Postal Code" for="address1_postalcode-1738281920674">Post Code</label><input id="address1_postalcode-1738281920674" type="text" name="address1_postalcode" placeholder="Post Code" title="Address 1: ZIP/Postal Code" maxlength="20" required="required">
+                                                                    </div>
+                                                                    <div class="textFormFieldBlock"
+                                                                        data-editorblocktype="TextFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="ccq_placeofwork"
+                                                                        data-prefill="false" data-required="required">
+                                                                        <label title="Place of Work" for="ccq_placeofwork-1738307488364">Place of Work</label><input id="ccq_placeofwork-1738307488364" type="text" name="ccq_placeofwork" placeholder="Enter the full legal name of your organisation" title="Place of Work" maxlength="100" required="required">
+                                                                    </div>
+                                                                    <div class="optionSetFormFieldBlock"
+                                                                        data-editorblocktype="OptionSetFormField"
+                                                                        data-targetaudience="contact"
+                                                                        data-targetproperty="ccq_aboriginalandortorresstraitislander"
+                                                                        data-prefill="false" data-required="required">
+                                                                        <label title="Aboriginal and/or Torres Strait Islander" class="block-label" for="ccq_aboriginalandortorresstraitislander-1738281747256">Are you of Aboriginal and/or Torres Strait Islander origin?</label>
+                                                                        <div class="radiobuttons"
+                                                                            id="ccq_aboriginalandortorresstraitislander-1738281747256">
+                                                                            <div>
+                                                                                <input type="radio" value="765450000" name="ccq_aboriginalandortorresstraitislander" id="ccq_aboriginalandortorresstraitislander-1738281747256-765450000" title="Yes - Aboriginal" required="required"><label for="765450000" title="Yes - Aboriginal">Yes - Aboriginal</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="radio" value="765450000" name="ccq_aboriginalandortorresstraitislander" id="ccq_aboriginalandortorresstraitislander-1738281747256-765450000" title="Yes - Torres Strait Islander" required=""><label for="765450000" title="Yes - Torres Strait Islander">Yes - Torres Strait Islander</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="radio" value="765450000" name="ccq_aboriginalandortorresstraitislander" id="ccq_aboriginalandortorresstraitislander-1738281747256-765450000" title="Yes - Both Aboriginal and Torres Strait Islander" required=""><label for="765450000" title="Yes - Both Aboriginal and Torres Strait Islander">Yes - Both Aboriginal and Torres Strait Islander</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="radio" value="765450001" name="ccq_aboriginalandortorresstraitislander" id="ccq_aboriginalandortorresstraitislander-1738281747256-765450001" title="No" required=""><label for="765450001" title="No">No</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="radio" value="765450003" name="ccq_aboriginalandortorresstraitislander" id="ccq_aboriginalandortorresstraitislander-1738281747256-765450003" title="Do not wish to answer" required=""><label for="765450003" title="Do not wish to answer">Do not wish to answer</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
+                                                                </div>
+
+
+                                                                <div data-editorblocktype="Divider"
+                                                                    style="margin: 20px 10px;">
+                                                                    <div class="dividerWrapper" align="center">
+                                                                        <table
+                                                                            style="padding: 0px; margin: 0px; width: 100%; border-collapse: collapse;"
+                                                                            role="presentation" class="" cellpadding="0"
+                                                                            cellspacing="0">
+                                                                            <tbody>
+                                                                                <tr style="padding: 0px;">
+                                                                                    <th
+                                                                                        style="margin:0px; padding: 0px; vertical-align:top;border-top-width: 2px; border-top-style: solid; border-top-color: #e1dfdd;">
+                                                                                        <p
+                                                                                            style="margin: 0px; padding: 0px; line-height: 0px; width: 100%;">
+                                                                                            <span><!--[if gte mso 9]><br/><![endif]-->&nbsp;</span>
+                                                                                        </p>
+                                                                                    </th>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                <div data-editorblocktype="Text" style="margin: 10px;">
+                                                                    <p>We take privacy seriously. We are committed to
+                                                                        respecting your privacy and protecting your
+                                                                        personal information. For more information on
+                                                                        how we collect and handle your personal
+                                                                        information please see our <a
+                                                                            href="https://cancerqld.org.au/about-us/our-privacy-policy/general-collection-statement/"><b><u>Privacy Collection Statement</u></b></a>.
+                                                                    </p>
+                                                                </div>
+                                                                <div class="twoOptionFormFieldBlock"
+                                                                    data-editorblocktype="TwoOptionFormField"
+                                                                    data-targetproperty="ci_privacycollection"
+                                                                    data-prefill="false" data-required="required">
+                                                                    <label title="Accept Privacy Collection Statement" class="block-label" for="ci_privacycollection">Do you accept Cancer Council Queensland's Privacy Collection Statement?</label>
+                                                                    <div class="radiobuttons" id="ci_privacycollection">
+                                                                        <div>
+                                                                            <input type="radio" value="true" name="ci_privacycollection" id="ci_privacycollection-1" title="Yes" required="required"><label for="1" title="Yes">I agree to Cancer Council Queensland's Privacy Collection Statement</label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div data-editorblocktype="SubmitButton"
+                                                                    class="submitButtonWrapper"><button class="submitButton" type="submit" aria-label="Submit" style="">
+        <span style="">Submit</span></button></div>
+                                                            </th>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+         let mobileInput = $('input[name="mobilephone"]');
+
+    mobileInput.on('input', function () {
+        let value = $(this).val();
+
+        // Remove any unwanted characters (allow digits and + at the start)
+        value = value.replace(/[^\d+]/g, '');
+
+        // Validate the pattern
+        let isValid = /^(\+61[4][0-9]{8}|04[0-9]{8})$/.test(value);
+
+        // Apply validation styling
+        if (isValid || value === '') {
+            $(this).removeClass('invalid').addClass('valid');
+        } else {
+            $(this).removeClass('valid').addClass('invalid');
+        }
+    });
+
+    // Optional: Prevent invalid characters from being entered
+    mobileInput.on('keypress', function (e) {
+        let char = String.fromCharCode(e.which);
+        if (!char.match(/[0-9+]/) || (char === '+' && $(this).val().length > 0)) {
+            e.preventDefault();
+        }
+    });
+
+// Validate ci_hospitalpostcode and contact_postcode
+    $('#ci_hospitalpostcode, #contact_postcode').on('input', function () {
+        const value = $(this).val();
+
+        // Allow only up to 4 numeric characters
+        if (!/^\d{0,4}$/.test(value)) {
+            $(this).val(value.slice(0, 4).replace(/[^0-9]/g, ''));
+        }
+    });
+    
+        $("input[type='tel']").on("keydown", function(event) {
+            // Prevent entering letters
+            if (isNaN(event.key) && event.key !== "Backspace" && event.key !== "Tab") {
+                event.preventDefault();
+            }
+        });
+        });
+    </script>
+</body>
+
+</html>
